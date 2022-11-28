@@ -69,7 +69,7 @@ export default function Login() {
                     </form>
 
                     <p className="mt-1 text-slate-50">
-                        Don't have an account yet? <Link href={ '/signup' } className="underline font-bold">Sign up</Link>
+                        Don&apos;t have an account yet? <Link href={ '/signup' } className="underline font-bold">Sign up</Link>
                     </p>
 
                 </div>
