@@ -1,8 +1,10 @@
 import axios from 'axios';
+import { useAuthContext } from 'contexts/authContext';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 
 export default function Add() {
+  const {user} = useAuthContext()
   const [newTodo, setNewTodo] = useState("");
   const router = useRouter()
 
@@ -10,12 +12,13 @@ export default function Add() {
     setNewTodo(e.target.value);
   };
   const HandleSubmit = () => {
-    console.log(newTodo);
+    // console.log(newTodo);
     axios
       .post('api/todo/post-todo', {
 
         "title": newTodo,
-        "isFinished": false,
+        "isfinished": false,
+        "uemail": user.email,
 
       }).then(function (response) {
         console.log(response);

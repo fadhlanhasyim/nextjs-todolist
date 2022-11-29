@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React from 'react'
 
-export default function Card({ title, isFinished, id }: { title: string, isFinished: boolean, id: number }) {
-    const color = isFinished ? "bg-green-600" : "bg-rose-600";
+export default function Card({ title, isfinished, id }: { title: string, isfinished: boolean, id: number }) {
+    const color = isfinished ? "bg-green-600" : "bg-rose-600";
     // const []
     const handleDelete = (e: number) => {
         axios.delete(`api/todo/delete-todo/${e}`)
@@ -10,7 +10,7 @@ export default function Card({ title, isFinished, id }: { title: string, isFinis
     const handleUpdate = (e: number) => {
         axios.put(`api/todo/update-todo/${e}`, {
             'title':title,
-            'isFinished': !isFinished
+            'isfinished': !isfinished
         })
             .then(function (response) {
                 console.log(response);

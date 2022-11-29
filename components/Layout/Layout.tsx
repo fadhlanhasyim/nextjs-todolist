@@ -15,7 +15,7 @@ export default function Layout(props: { children: any }) {
         <div>
             <div className="grid gap-4 grid-cols-1 sm:grid-flow-cols-1 md:grid-cols-3 lg:grid-cols-4 m-4" id="todo">
                 {todo?.map((t, idx: number) => (
-                    <Card title={t.title} isFinished={t.isFinished} id={t.id} key={idx}/>
+                    <Card title={t.title} isfinished={t.isfinished} id={t.id} key={idx}/>
                 ))}
             </div>
         </div>
